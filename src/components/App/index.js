@@ -1,9 +1,10 @@
-import './App.scss';
+import { Routes } from '../Routes';
+import './styles.scss';
 
 function App() {
   return (
     <div className="App">
-      Регистрация
+      <Routes />
     </div>
   );
 }

@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "commit": "cz"
+    "commit": "cz",
+    "lint": "eslint . --ext .js,.jsx ."
   },
   "eslintConfig": {
     "extends": [

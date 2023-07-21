@@ -9,10 +9,8 @@ import {
     invalidEmailErrorText,
     invalidConfirmPasswordErrorText,
 } from '../../constants';
-import InputPassword from '../../components/InputPassword';
-import InputText from '../../components/InputText';
 import './style.scss';
-import Button from '../../components/Button';
+import { Button, InputPassword, InputText } from '../../components';
 
 export const Registration = () => {
     const [userData, setUserData] = useState({

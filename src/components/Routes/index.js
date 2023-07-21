@@ -1,8 +1,7 @@
 import { Routes as RoutesDOM, Route } from 'react-router-dom';
 
 import { ROUTES } from '../../constants';
-import { NotFound } from '../../pages/NotFound';
-import { Registration } from '../../pages/Registration';
+import { Registration, NotFound } from '../../pages';
 
 export const Routes = () => (
 	<RoutesDOM>

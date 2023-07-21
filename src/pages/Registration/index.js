@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     namePattern,
     emailPattern,
@@ -9,6 +10,7 @@ import {
     invalidNameErrorText,
     invalidEmailErrorText,
     invalidConfirmPasswordErrorText,
+    ROUTES,
 } from '../../constants';
 import './style.scss';
 import { Button, InputPassword, InputText } from '../../components';
@@ -126,11 +128,33 @@ export const Registration = () => {
     };
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const formValidCheck = () => !nameError && !emailError && !passwordError && !confirmPasswordError;
+
+    const { registerSuccess, requestCounter, errorMessage } = useSelector(
+        (state) => state.user
+    );
+
+    useEffect(() => {
+        if (registerSuccess) navigate(ROUTES.LOGIN);
+        if (!registerSuccess && errorMessage) {
+            const errors = JSON.parse(errorMessage);
+
+            setEmailError('');
+            if (errors.error) {
+                setEmailError('Только определенные пользователи успешно регистрируются');
+            }
+
+        }
+    }, [navigate, registerSuccess, requestCounter, errorMessage])
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        dispatch(registerUser(userData));
+        if (formValidCheck()) {
+            dispatch(registerUser(userData));
+        }
 
         setNameDirty(true);
         setEmailDirty(true);

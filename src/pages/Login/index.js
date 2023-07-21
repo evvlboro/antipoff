@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {
+    ROUTES,
     emailPattern,
     emptyEmailErrorText,
     emptyPasswordErrorText,
@@ -76,12 +78,34 @@ export const Login = () => {
         }
     };
 
+    const formValidCheck = () => !emailError && !passwordError;
+
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { errorMessage, isAuthenticated, requestCounter } = useSelector(
+        (state) => state.user
+    );
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate(ROUTES.ROOT);
+        }
+        if (!isAuthenticated && errorMessage) {
+            const errors = JSON.parse(errorMessage);
+            setPasswordError('');
+
+            if (errors.error) {
+                setPasswordError('Неверный логин или пароль');
+            }
+        }
+    }, [navigate, isAuthenticated, requestCounter, errorMessage]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        dispatch(loginUser(userData));
+        if (formValidCheck()) {
+            dispatch(loginUser(userData));
+        }
 
         setEmailDirty(true);
         setPasswordDirty(true);

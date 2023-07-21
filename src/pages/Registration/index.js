@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
     namePattern,
     emailPattern,
@@ -11,6 +12,7 @@ import {
 } from '../../constants';
 import './style.scss';
 import { Button, InputPassword, InputText } from '../../components';
+import { registerUser } from '../../store/thunk/registerUser';
 
 export const Registration = () => {
     const [userData, setUserData] = useState({
@@ -123,10 +125,12 @@ export const Registration = () => {
         }
     };
 
+    const dispatch = useDispatch();
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // dispatch(registerUser(userData));
+        dispatch(registerUser(userData));
 
         setNameDirty(true);
         setEmailDirty(true);

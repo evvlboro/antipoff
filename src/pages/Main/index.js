@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../store/slices/user';
+import { clearData } from '../../store/slices/team';
 import { Button, Card } from '../../components';
 import { ROUTES } from '../../constants';
 import { getTeam } from '../../store/thunk/getTeam';
@@ -18,6 +19,7 @@ export const Main = () => {
 
     const handleLogout = () => {
         dispatch(logoutUser());
+        dispatch(clearData());
     }
 
     const handleRegistrate = () => {

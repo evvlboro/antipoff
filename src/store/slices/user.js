@@ -13,7 +13,7 @@ const userSlice = createSlice({
         errorMessage: '',
         registerSuccess: false,
         requestCounter: 0,
-        isAuthenticated: false,
+        isAuthenticated: false
     },
     reducers: {
         autoLoginUser(state) {

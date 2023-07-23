@@ -19,3 +19,9 @@ export const login = ({ email, password }) =>
 			password,
 		},
 	});
+
+export const getTeam = (page = 1) =>
+	fetchTemplate({
+		path: `/users?page=${page}`,
+		method: 'GET',
+	});

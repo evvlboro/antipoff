@@ -33,14 +33,11 @@
 		cursor: auto;
 	}
 
-	&_color-primary:hover:disabled {
-		background: #cccdc2;
-	}
-
 	&_color-secondary {
+		border: 1px solid #f8f8f8;
 		background: transparent;
-		padding: 6px 14px;
-		border: 2px solid #c3f402;
+
+		color: #f8f8f8;
 	}
 
 	&_color-secondary:disabled {
@@ -48,23 +45,5 @@
 		border: 2px solid #cccdc2;
 		color: #cccdc2;
 		cursor: auto;
-	}
-
-	&_color-secondary:hover {
-		border-color: rgba($color: #000000, $alpha: 0);
-		padding: 6px 14px;
-		background: #c3f402;
-	}
-
-	&_color-secondary:active {
-		border-color: rgba($color: #000000, $alpha: 0);
-		padding: 6px 14px;
-		background: #3fe911;
-	}
-
-	&_color-secondary:hover:disabled {
-		background: transparent;
-		padding: 6px 14px;
-		border: 2px solid #cccdc2;
 	}
 }

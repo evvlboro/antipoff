@@ -15,6 +15,24 @@ const userSlice = createSlice({
         requestCounter: 0,
         isAuthenticated: false,
     },
+    reducers: {
+        autoLoginUser(state) {
+            return {
+                ...state,
+                isAuthenticated: true,
+                errorMessage: ''
+            }
+        },
+        logoutUser(state) {
+            localStorage.removeItem('token');
+
+            return {
+                ...state,
+                isAuthenticated: false,
+                errorMessage: ''
+            }
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(registerUser.pending, (state) => ({
             ...state,
@@ -58,3 +76,5 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
+
+export const { autoLoginUser, logoutUser } = userSlice.actions;

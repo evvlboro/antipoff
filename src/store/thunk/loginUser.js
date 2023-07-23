@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { login } from '../../untils/mianApi';
 
 export const loginUser = createAsyncThunk(
-	'jwt/create',
+	'user/login',
 	async (payload, thunkAPI) => {
 		try {
 			const response = await login(payload);

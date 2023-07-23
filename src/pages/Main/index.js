@@ -25,8 +25,8 @@ export const Main = () => {
 
     return (
         <section className='main'>
-            <header className="main__header">
-                {isAuthenticated ?
+            {isAuthenticated ?
+                <header className="main__header">
                     <Button
                         label='Выход'
                         type='button'
@@ -35,7 +35,16 @@ export const Main = () => {
                         className='main__logout-btn'
                         onClick={handleLogout}
                     />
-                    :
+                    <h1 className='main__title'>Наша команда</h1>
+                    <h2 className='main__subtitle'>
+                        Это опытные специалисты, хорошо разбирающиеся во всех задачах,
+                        которые ложатся на их плечи, и умеющие находить выход из любых,
+                        даже самых сложных ситуаций.
+                    </h2>
+
+                </header>
+                :
+                <header className="main__header">
                     <div className='main__btn-container'>
                         <Button
                             label='Зарегистрироваться'
@@ -53,14 +62,12 @@ export const Main = () => {
                             onClick={handleLogin}
                         />
                     </div>
-                }
-                <h1 className='main__title'>Наша команда</h1>
-                <h2 className='main__subtitle'>
-                    Это опытные специалисты, хорошо разбирающиеся во всех задачах,
-                    которые ложатся на их плечи, и умеющие находить выход из любых,
-                    даже самых сложных ситуаций.
-                </h2>
-            </header>
-        </section>
+                    <h1 className='main__title'>Добро пожаловать!</h1>
+                    <h2 className='main__subtitle'>
+                        Авторизируйтесь, чтобы увидеть нашу команду.
+                    </h2>
+                </header>
+            }
+        </section >
     )
 }

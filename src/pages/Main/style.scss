@@ -45,4 +45,44 @@
 		font-weight: 400;
 		line-height: normal;
 	}
+
+	@media (max-width: 500px) {
+		&__header {
+			padding: 12px 16px 64px 16px;
+		}
+
+		&__title {
+			font-size: 36px;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__logout-btn {
+			font-size: 0;
+			background: url(../../images/exit.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+			border: none;
+		}
+
+		&__login-btn {
+			font-size: 0;
+			background: url(../../images/login-white.svg) no-repeat;
+			background-size: contain;
+			width: 20px;
+			height: 20px;
+			border: none;
+			margin-left: 10px;
+		}
+		&__registrate-btn {
+			font-size: 0;
+			background: url(../../images/registrate-white.svg) no-repeat;
+			background-size: contain;
+			width: 25px;
+			height: 25px;
+			border: none;
+		}
+	}
 }

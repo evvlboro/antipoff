@@ -51,6 +51,7 @@ export const Main = () => {
                             type='button'
                             color='secondary'
                             size='medium'
+                            className='main__registrate-btn'
                             onClick={handleRegistrate}
                         />
                         <Button

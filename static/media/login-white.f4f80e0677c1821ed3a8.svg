@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+	<title>login-svg</title>
+	<defs>
+		<image  width="90" height="126" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAB+AQMAAACeW5RhAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAAAHUlEQVR4nGNgoBP4DwcHRjmjnFHOKGeUM+AcOgEADEmacQXDiNsAAAAASUVORK5CYII="/>
+		<image  width="8" height="8" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAAtJREFUeJxjYEAFAAAQAAE5vY9lAAAAAElFTkSuQmCC"/>
+		<image  width="66" height="66" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCAQMAAADZmpKrAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAAAcUlEQVR4nM2SsQ2AMBADE1FQMgKjZDQyWkZhBEoKFIMUbCNggHx1UvQXv+QQrinhnriSho007qTpIM1VBL0icwMUDqAwQkJIuEiYOhaiTRXBlEXlh/J3oz7Nr9+cwKmc1Ol9Uepa55a4OW6TG+bWtSae2yiY7TBp5AEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Layer">
+		<use id="Layer" href="#img1" x="37" y="1"/>
+		<use id="Layer" href="#img2" x="1" y="60"/>
+		<use id="Layer" href="#img3" x="19" y="31"/>
+	</g>
+</svg>

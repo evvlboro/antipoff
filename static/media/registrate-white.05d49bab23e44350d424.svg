@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>registrate-svg</title>
+	<defs>
+		<image  width="24" height="14" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOAQMAAAAPNk49AAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAAAK0lEQVR4nGNgsC9gYLCvYJBAwv/tChj+MzAwSIBw/TwGyf/vGRjh+DkIAwB/YxGAJFDIcQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="0" y="5"/>
+</svg>

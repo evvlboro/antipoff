@@ -1,5 +1,5 @@
-import './style.scss';
 import PropTypes from 'prop-types';
+import './style.scss';
 
 export default function InputPassword({
 	label,

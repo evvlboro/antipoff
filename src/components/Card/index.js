@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './style.scss';
 
 // eslint-disable-next-line no-unused-vars
-export const Card = ({ firstName, lastName, avatar, isLiked }) => {
+export const Card = ({ id, firstName, lastName, avatar, isLiked }) => {
     const [like, setLike] = useState(isLiked);
     const handleLike = () => {
         setLike(!like);
@@ -11,14 +12,16 @@ export const Card = ({ firstName, lastName, avatar, isLiked }) => {
 
     return (
         <figure className='card'>
-            <img
-                src={avatar}
-                className='card__avatar'
-                alt={`${firstName} ${lastName} avatar`}
-            />
-            <figcaption className='card__name'>
-                {`${firstName} ${lastName}`}
-            </figcaption>
+            <Link to={`/mate/${id}`} className='card__link'>
+                <img
+                    src={avatar}
+                    className='card__avatar'
+                    alt={`${firstName} ${lastName} avatar`}
+                />
+                <figcaption className='card__name'>
+                    {`${firstName} ${lastName}`}
+                </figcaption>
+            </Link>
             <div className='card__like-container'>
                 <button
                     className={`card__like-btn ${like && 'card__like-btn_active'}`}
@@ -31,6 +34,7 @@ export const Card = ({ firstName, lastName, avatar, isLiked }) => {
 }
 
 Card.propTypes = {
+    id: PropTypes.number.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,

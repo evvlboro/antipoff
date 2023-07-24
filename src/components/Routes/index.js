@@ -1,8 +1,8 @@
 import { Routes as RoutesDOM, Route } from 'react-router-dom';
 
 import { ROUTES } from '../../constants';
-import { Main, Registration, Login, NotFound } from '../../pages';
-import { PublicRoute } from '..';
+import { Main, Mate, Registration, Login, NotFound } from '../../pages';
+import { PrivateRoute, PublicRoute } from '..';
 
 export const Routes = () => (
 	<RoutesDOM>
@@ -10,6 +10,14 @@ export const Routes = () => (
 			path={ROUTES.ROOT}
 			element={
 				<Main />
+			}
+		/>
+		<Route
+			path={ROUTES.MATE}
+			element={
+				<PrivateRoute>
+					<Mate />
+				</PrivateRoute>
 			}
 		/>
 		<Route

@@ -73,6 +73,7 @@ export const Main = () => {
                                     (element) =>
                                         <Card
                                             key={element?.id}
+                                            id={element?.id}
                                             firstName={element?.first_name}
                                             lastName={element?.last_name}
                                             avatar={element?.avatar}

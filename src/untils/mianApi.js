@@ -25,3 +25,9 @@ export const getTeam = (page = 1) =>
 		path: `/users?page=${page}`,
 		method: 'GET',
 	});
+
+export const getTeammate = (id) =>
+	fetchTemplate({
+		path: `/users/${id}`,
+		method: 'GET',
+	});

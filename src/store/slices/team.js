@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getTeam } from '../thunk/getTeam';
+import { getTeammate } from '../thunk/getTeammate';
 
 const teamSlice = createSlice({
     name: 'team',
@@ -31,6 +32,24 @@ const teamSlice = createSlice({
             errorMessage: '',
         }));
         builder.addCase(getTeam.rejected, (state, action) => ({
+            ...state,
+            isLoading: false,
+            errorMessage: action.payload,
+        }));
+        builder.addCase(getTeammate.pending, (state) => ({
+            ...state,
+            isLoading: true,
+        }));
+        builder.addCase(getTeammate.fulfilled, (state, action) => ({
+            ...state,
+            data: [
+                ...state.data,
+                action.payload.data
+            ],
+            isLoading: false,
+            errorMessage: '',
+        }));
+        builder.addCase(getTeammate.rejected, (state, action) => ({
             ...state,
             isLoading: false,
             errorMessage: action.payload,

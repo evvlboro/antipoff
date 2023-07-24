@@ -1,0 +1,166 @@
+.mate {
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		padding: 32px 60px 64px;
+		background: #512689;
+	}
+
+	&__logout-btn {
+		margin-left: auto;
+	}
+
+	&__profile-container {
+		display: flex;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 32px;
+	}
+
+	&__avatar {
+		margin-left: 30px;
+		width: 187px;
+		height: 187px;
+		border-radius: 100px;
+	}
+
+	&__name {
+		margin: 0;
+		color: #fff;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__role {
+		margin: 0;
+		margin-top: 16px;
+		color: #fff;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__main {
+		padding: 49px 168px 0;
+		display: flex;
+	}
+
+	&__description {
+		margin: 0;
+		padding-right: 129px;
+		color: #151317;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 136.187%;
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__contacts-container {
+		display: flex;
+	}
+
+	&__contacts-img {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__contacts {
+		margin: 0 0 25px 8px;
+	}
+
+	&__contacts-text {
+		margin: 0 0 25px 8px;
+		color: #151317;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 136.187%;
+	}
+
+	@media (max-width: 900px) {
+		&__header {
+			padding: 12px 16px 64px 16px;
+		}
+
+		&__logout-btn {
+			font-size: 0;
+			background: url(../../images/exit.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+			border: none;
+		}
+
+		&__back-btn {
+			font-size: 0;
+			background: url(../../images/back.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+			border: none;
+		}
+
+		&__profile-container {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__avatar {
+			margin: 0;
+			margin-top: 16px;
+		}
+
+		&__title {
+			margin: 0;
+			margin-top: 32px;
+			order: -1;
+			align-items: center;
+		}
+
+		&__name {
+			margin: 0;
+			font-size: 36px;
+			text-align: center;
+		}
+
+		&__role {
+			margin: 0;
+			margin-top: 6px;
+			font-size: 20px;
+		}
+
+		&__main {
+			flex-direction: column;
+			padding: 32px 16px;
+		}
+
+		&__description {
+			padding: 0;
+			margin: 0;
+			margin-top: 8px;
+		}
+
+		&__contacts {
+			order: -1;
+			margin: 0;
+		}
+
+		&__contacts-text {
+			margin: 0 0 25px 8px;
+		}
+	}
+}

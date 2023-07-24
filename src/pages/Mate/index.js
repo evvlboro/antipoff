@@ -5,7 +5,7 @@ import { logoutUser } from '../../store/slices/user';
 import { clearData } from '../../store/slices/team';
 import { getTeammate } from '../../store/thunk/getTeammate';
 import { Button } from '../../components';
-import { description } from '../../constants';
+import { ROUTES, description } from '../../constants';
 import phone from '../../images/phone.svg';
 import email from '../../images/email.svg';
 import './style.scss';
@@ -25,6 +25,7 @@ export const Mate = () => {
     const handleLogout = () => {
         dispatch(logoutUser());
         dispatch(clearData());
+        navigate(ROUTES.ROOT);
     }
 
     useEffect(() => {

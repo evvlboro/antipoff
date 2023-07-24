@@ -12,7 +12,7 @@ export const Card = ({ id, firstName, lastName, avatar, isLiked }) => {
 
     return (
         <figure className='card'>
-            <Link to={`/mate/${id}`} className='card__link'>
+            <Link to={`/antipoff/mate/${id}`} className='card__link'>
                 <img
                     src={avatar}
                     className='card__avatar'

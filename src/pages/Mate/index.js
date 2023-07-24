@@ -19,6 +19,7 @@ export const Mate = () => {
     const dispatch = useDispatch();
 
     const handleBack = () => {
+        dispatch(clearData());
         navigate(-1);
     }
 
@@ -32,7 +33,8 @@ export const Mate = () => {
         if (!mate) {
             dispatch(getTeammate(Number(typeId)));
         }
-    }, [dispatch, mate, typeId]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dispatch, typeId]);
 
     return (
         <section className='mate'>

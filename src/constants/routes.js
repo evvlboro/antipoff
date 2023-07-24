@@ -1,6 +1,6 @@
 export const ROUTES = {
-	ROOT: '/',
-	REGISTRATION: '/registration',
-	LOGIN: '/login',
-	MATE: '/mate/:typeId'
+	ROOT: '/antipoff/',
+	REGISTRATION: '/antipoff/registration',
+	LOGIN: '/antipoff/login',
+	MATE: '/antipoff/mate/:typeId'
 };

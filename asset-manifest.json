@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/antipoff/static/css/main.59f6a79b.css",
-    "main.js": "/antipoff/static/js/main.8d54adeb.js",
+    "main.js": "/antipoff/static/js/main.daa5268c.js",
     "static/js/787.40c5981e.chunk.js": "/antipoff/static/js/787.40c5981e.chunk.js",
     "static/media/Roboto-Regular.ttf": "/antipoff/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/Roboto-Regular.woff": "/antipoff/static/media/Roboto-Regular.d535d388dc916299d083.woff",
     "static/media/login-white.svg": "/antipoff/static/media/login-white.f4f80e0677c1821ed3a8.svg",
     "static/media/eye-off.svg": "/antipoff/static/media/eye-off.eb0a87724072a43c75fc.svg",
     "static/media/exit.svg": "/antipoff/static/media/exit.029da92b45a01830dacb.svg",
+    "index.html": "/antipoff/index.html",
     "static/media/phone.svg": "/antipoff/static/media/phone.44b3b2f36347d53306fc658f66b2d7e6.svg",
     "static/media/back.svg": "/antipoff/static/media/back.d1c244d81620dd549cb9.svg",
-    "index.html": "/antipoff/index.html",
     "static/media/email.svg": "/antipoff/static/media/email.d3dd586a1c9df4ef0718abd0302c6c3d.svg",
     "static/media/eye.svg": "/antipoff/static/media/eye.bec9137229f8281c113a.svg",
     "static/media/like.svg": "/antipoff/static/media/like.87b226b3e208265a5a06.svg",
     "static/media/registrate-white.svg": "/antipoff/static/media/registrate-white.05d49bab23e44350d424.svg",
     "static/media/like-active.svg": "/antipoff/static/media/like-active.4ce90f45a3feb6e27018.svg",
     "main.59f6a79b.css.map": "/antipoff/static/css/main.59f6a79b.css.map",
-    "main.8d54adeb.js.map": "/antipoff/static/js/main.8d54adeb.js.map",
+    "main.daa5268c.js.map": "/antipoff/static/js/main.daa5268c.js.map",
     "787.40c5981e.chunk.js.map": "/antipoff/static/js/787.40c5981e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59f6a79b.css",
-    "static/js/main.8d54adeb.js"
+    "static/js/main.daa5268c.js"
   ]
 }
